@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="U6r-7M-5A0">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--二维码生成器-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入需要生成二维码的链接" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qe7-eS-62J">
+                                <rect key="frame" x="50" y="104" width="221" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OeW-h6-TdI">
+                                <rect key="frame" x="22" y="150" width="212" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RNU-ME-V7Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cz-7x-9jH">
+                                <rect key="frame" x="244" y="155" width="60" height="30"/>
+                                <color key="backgroundColor" red="0.49926163690000003" green="0.76473721589999999" blue="0.2857149712" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="jXJ-Xq-uPL"/>
+                                </constraints>
+                                <state key="normal" title="确定">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOK:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WU2-Y5-u18"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hHY-0R-Bti">
+                                <rect key="frame" x="26" y="210" width="268" height="268"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="1ZK-yf-hWV"/>
+                                    <constraint firstAttribute="width" constant="150" id="H78-pP-z95"/>
+                                    <constraint firstAttribute="width" secondItem="hHY-0R-Bti" secondAttribute="height" multiplier="1:1" id="fIC-c5-6dv"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1ZK-yf-hWV"/>
+                                        <exclude reference="H78-pP-z95"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90852929059999998" green="1" blue="0.87064201070000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="8cz-7x-9jH" firstAttribute="leading" secondItem="OeW-h6-TdI" secondAttribute="trailing" constant="10" id="Aou-ph-bwP"/>
+                            <constraint firstItem="OeW-h6-TdI" firstAttribute="top" secondItem="qe7-eS-62J" secondAttribute="bottom" constant="25" id="C5l-I3-JoZ"/>
+                            <constraint firstItem="hHY-0R-Bti" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="J8N-ib-3rA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8cz-7x-9jH" secondAttribute="trailing" id="LOU-eE-4b4"/>
+                            <constraint firstItem="qe7-eS-62J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OIz-Gf-Va6"/>
+                            <constraint firstItem="hHY-0R-Bti" firstAttribute="top" secondItem="OeW-h6-TdI" secondAttribute="bottom" constant="20" id="Pb7-gg-8BS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OeW-h6-TdI" secondAttribute="trailing" constant="6" id="bNN-0d-598"/>
+                            <constraint firstItem="qe7-eS-62J" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="eIJ-J6-SEQ"/>
+                            <constraint firstItem="8cz-7x-9jH" firstAttribute="centerY" secondItem="OeW-h6-TdI" secondAttribute="centerY" id="feq-E1-v2g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hHY-0R-Bti" secondAttribute="trailing" constant="10" id="hlV-hR-RxL"/>
+                            <constraint firstItem="OeW-h6-TdI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="6" id="rnc-nW-stv"/>
+                            <constraint firstItem="hHY-0R-Bti" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wNb-ee-Hf1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bNN-0d-598"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="二维码生成器" id="37P-6u-cEx"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="hHY-0R-Bti" id="a1q-3R-wjs"/>
+                        <outlet property="textField" destination="OeW-h6-TdI" id="YyX-XR-RAU"/>
+                        <segue destination="9Y0-7e-MUE" kind="push" identifier="image" id="k2o-tT-Ptz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="530" y="376"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="Icc-3E-coS">
+            <objects>
+                <viewController id="9Y0-7e-MUE" customClass="ImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T9P-A8-ZRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="kvu-W9-zhZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Je-jO-UXP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzp-O5-A8j">
+                                <rect key="frame" x="244" y="518" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8j5-e2-RGb"/>
+                                    <constraint firstAttribute="width" constant="60" id="jgh-mE-v66"/>
+                                </constraints>
+                                <state key="normal" title="保存">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapSave:" destination="9Y0-7e-MUE" eventType="touchUpInside" id="6fa-Sa-0aZ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9kS-la-Bgt">
+                                <rect key="frame" x="0.0" y="64" width="320" height="444"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="fzp-O5-A8j" secondAttribute="trailing" id="MLE-hm-JSP"/>
+                            <constraint firstItem="9kS-la-Bgt" firstAttribute="top" secondItem="T9P-A8-ZRb" secondAttribute="bottom" id="Xep-ZI-7ls"/>
+                            <constraint firstItem="kvu-W9-zhZ" firstAttribute="top" secondItem="fzp-O5-A8j" secondAttribute="bottom" constant="20" id="Y03-0u-gEn"/>
+                            <constraint firstItem="9kS-la-Bgt" firstAttribute="centerX" secondItem="4Je-jO-UXP" secondAttribute="centerX" id="Y6a-zr-YAE"/>
+                            <constraint firstItem="9kS-la-Bgt" firstAttribute="width" secondItem="4Je-jO-UXP" secondAttribute="width" id="hKt-VI-JlR"/>
+                            <constraint firstItem="kvu-W9-zhZ" firstAttribute="top" secondItem="9kS-la-Bgt" secondAttribute="bottom" constant="60" id="oTC-dO-Gjo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ciG-qr-WbO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="9kS-la-Bgt" id="CtC-RN-2cO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uda-EO-xY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="901" y="376"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OgH-E9-dCE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U6r-7M-5A0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a6F-vf-c4b">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QW3-Bd-WoM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TCn-1j-nBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="177" y="376"/>
+        </scene>
+    </scenes>
+</document>
